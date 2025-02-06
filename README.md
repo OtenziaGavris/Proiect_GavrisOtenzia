@@ -7,3 +7,5 @@ Entități:
 -	Arbore, sanatate_arbore
 -	Interventie_silvica, angajat, angajat_interventie
 -	Proprietar 
+
+![Diagrame](https://github.com/user-attachments/assets/ff399339-1a1a-44be-8487-4b23ef3f3074)
