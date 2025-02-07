@@ -14,17 +14,15 @@ DELETE FROM Arbore WHERE ID_Arbore = 15;
 DELETE FROM Arbore WHERE Varsta > 200;
 DELETE FROM Arbore WHERE ID_Parcela NOT IN (SELECT ID_Parcela FROM Parcela);
 
-DELETE FROM Sanatate_Arbore WHERE ID_Arbore = 20;
-DELETE FROM Sanatate_Arbore WHERE Data_Verificare < DATE_SUB(CURDATE(), INTERVAL 10 YEAR);----
+DELETE FROM Sanatate_Arbore WHERE ID_Arbore = 5;
 DELETE FROM Sanatate_Arbore WHERE ID_Arbore NOT IN (SELECT ID_Arbore FROM Arbore);
 
 DELETE FROM Interventie_Silvica WHERE ID_Interventie = 8;
-DELETE FROM Interventie_Silvica WHERE Data < '2000-01-01';
+DELETE FROM Interventie_Silvica WHERE Data < '2024-02-10';
 DELETE FROM Interventie_Silvica WHERE ID_Arbore NOT IN (SELECT ID_Arbore FROM Arbore);
 
 DELETE FROM Angajat WHERE ID_Angajat = 7;
 DELETE FROM Angajat WHERE ID_Angajat NOT IN (SELECT ID_Angajat FROM Angajat_Interventie);
-DELETE FROM Angajat WHERE Data_Angajare < '1980-01-01';
 
 DELETE FROM Angajat_Interventie WHERE ID_Angajat = 4 AND ID_Interventie = 10;
 DELETE FROM Angajat_Interventie WHERE ID_Interventie NOT IN (SELECT ID_Interventie FROM Interventie_Silvica);
