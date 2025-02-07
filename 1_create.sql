@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS padure
 	judet VARCHAR (50) NOT NULL,
 	tip VARCHAR (50),
 	id_proprietar INT,
-	FOREIGN KEY (id) REFERENCES proprietar (id) 
+	FOREIGN KEY (id_proprietar) REFERENCES proprietar (id) 
 );
 
 CREATE TABLE IF NOT EXISTS proprietar 
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS parcela
 	tip_sol VARCHAR (50),
 	an_infiintare INT,
 	id_padure INT,
-	FOREIGN KEY (id) references padure (id)
+	FOREIGN KEY (id_padure) references padure (id)
 );
 
 CREATE TABLE IF NOT EXISTS arbore 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS arbore
 	inaltime DECIMAL,
 	diametru DECIMAL,
 	id_parcela INT,
-	FOREIGN KEY (id) REFERENCES parcela (id)
+	FOREIGN KEY (id_parcela) REFERENCES parcela (id)
 );
 
 CREATE TABLE IF NOT EXISTS sanatate_arbore
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS sanatate_arbore
 	stare VARCHAR (50),
 	data_verificare DATE,
 	observatii TEXT,
-	FOREIGN KEY (id) REFERENCES arbore (id)
+	FOREIGN KEY (id_arbore) REFERENCES arbore (id)
 );
 
 CREATE TABLE IF NOT EXISTS interventie_silvica
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS interventie_silvica
 	data_interventie DATE,
 	responsabil VARCHAR (100) NOT NULL,
 	id_arbore INT,
-	FOREIGN KEY (id) REFERENCES arbore (id)
+	FOREIGN KEY (id_arbore) REFERENCES arbore (id)
 );
 
 CREATE TABLE IF NOT EXISTS angajat
