@@ -43,9 +43,6 @@ WHERE Stare = 'Bolnav';
 SELECT * FROM Sanatate_Arbore
 WHERE ID_Arbore = (SELECT ID_Arbore FROM Arbore ORDER BY Inaltime DESC LIMIT 1);
 
-SELECT * FROM Sanatate_Arbore
-WHERE Data_Verificare >= (SELECT DATE_SUB(CURDATE(), INTERVAL 1 MONTH));-----
-
 
 SELECT * FROM Interventie_Silvica
 WHERE ID_Arbore IN (SELECT ID_Arbore FROM Arbore WHERE Inaltime > 20);
