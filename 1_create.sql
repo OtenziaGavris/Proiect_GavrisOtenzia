@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS parcela
 	suprafata DECIMAL,
 	tip_sol VARCHAR (50),
 	an_infiintare INT,
+	id_padure INT,
 	FOREIGN KEY (id) references padure (id)
 );
 
@@ -32,6 +33,7 @@ CREATE TABLE IF NOT EXISTS arbore
 	varsta INT,
 	inaltime DECIMAL,
 	diametru DECIMAL,
+	id_parcela INT,
 	FOREIGN KEY (id) REFERENCES parcela (id)
 );
 
